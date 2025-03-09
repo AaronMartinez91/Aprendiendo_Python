@@ -1,0 +1,6 @@
+alt + shift + flecha abajo : COPIA LÍNEA/S
+alt + flecha abajo: MUEVE LÍNEAS HACIA ABAJO
+cntl + ç: comenta la línea
+alt + z: ORDENAR que todo quepa en pantalla
+para escribir en dos sitios a la vez: click en la zona a escribir 1, alt + click en la zona 2
+cntrl + h: buscas una palabra y la sustituyes por la que quieras en todo el documento

@@ -1,0 +1,3 @@
+buscar chuletas: "cheat sheet python type:pdf" https://www.pythoncheatsheet.org/
+documentación oficial "python docs"
+indice tiobe: estadística lenguajes de programación
