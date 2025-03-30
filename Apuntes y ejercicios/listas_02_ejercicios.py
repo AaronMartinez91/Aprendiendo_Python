@@ -29,10 +29,6 @@ for i, color in enumerate(colores):
 
 # Índice 3: amarillo
 
-
-
-
-
 # ? Ejercicio 3: Invertir el orden de una lista
 
 # Dada la lista:
@@ -82,6 +78,9 @@ for numero in numeros:  # ! ahora sí los estoy añadiendo a una nueva lista
         numeros_pares.append(numero)
 print(numeros_pares)
 
+# ? segunda forma:
+pares = [num for num in numeros if num % 2 == 0] # forma compactada
+print(pares)
 
 
 # ? Ejercicio 6: Encontrar el número más grande
@@ -92,7 +91,9 @@ edades = [15, 22, 30, 18, 27, 35, 10]
 
 # Escribe un programa que encuentre y muestre el número más grande de la lista, sin utilizar métodos
 
-mayor = 0  # ! una vez más juego con una variable temporal que modificaré cada vez que un número sea mayor para guardarlo
+# ! inicializar en 0 podría darme un problema si todos los números fueran negativos, así que busco el menor valor posible en python
+mayor = float('-inf')  # ! una vez más juego con una variable temporal que modificaré cada vez que un número sea mayor para guardarlo
+# mayor = -math.inf     si importamos el módulo
 for edad in edades:
     if edad > mayor:
         mayor=edad
@@ -113,10 +114,13 @@ letras = ["a", "b", "c", "a", "d", "b", "a", "c"]
 
 letra_a_buscar = input(f"¿Qué letra deseas buscar en esta lista: {letras}? ")
 
-cantidad = letras.count(letra_a_buscar) # ! este método me debería devolver un int con el número de veces que sale el elemento entre paréntesis dentro de la lista de antes del .count
+while not letra_a_buscar.lower().strip().isalpha():
+    letra_a_buscar = input(f"Debes introducir una letra: ")
+
+cantidad = letras.count(letra_a_buscar.lower().strip()) # ! este método me debería devolver un int con el número de veces que sale el elemento entre paréntesis dentro de la lista de antes del .count
 if cantidad == 0:
-    print(f"La letra {letra_a_buscar} no se encuentra en la lista {letras}.")
+    print(f"La letra {letra_a_buscar.lower().strip()} no se encuentra en la lista {letras}.")
 elif cantidad == 1:
-    print(f"La letra {letra_a_buscar} se encuentra {cantidad} vez en la lista {letras}.")
+    print(f"La letra {letra_a_buscar.lower().strip()} se encuentra {cantidad} vez en la lista {letras}.")
 else:
-    print(f"La letra {letra_a_buscar} se encuentra {cantidad} veces en la lista {letras}.")
+    print(f"La letra {letra_a_buscar.lower().strip()} se encuentra {cantidad} veces en la lista {letras}.")

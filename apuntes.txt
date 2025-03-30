@@ -3,3 +3,5 @@ documentación oficial "python docs"
 indice tiobe: estadística lenguajes de programación
 
 pythontutor.com página que te explica el código de forma gráfica
+
+better comments
