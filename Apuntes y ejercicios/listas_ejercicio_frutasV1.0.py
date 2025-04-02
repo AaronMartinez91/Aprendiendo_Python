@@ -37,14 +37,14 @@ def realizar_apuesta(saldo_actual):
             print("No te queda saldo disponible.")
             return None #! Salimos del bucle sin realizar apuesta ya que sin dinero no debería poder apostar
         
-        apuesta = int(input("Introduce la cantidad de dinero que quieres apostar o 0 para cancelar la apuesta: "))
+        apuesta = float(input("Introduce la cantidad de dinero que quieres apostar o 0 para cancelar la apuesta: "))
         
         if apuesta == 0:
             return None #! Con esto aseguro una vuelta atrás si no se quiere apostar
         elif apuesta < 0:
             print("Por favor, introduce una cantidad positiva.")
         elif apuesta > saldo_actual:
-            print(f"No tienes suficiente saldo, el máximo que puedes apostar es {saldo_actual}.")
+            print(f"No tienes suficiente saldo, el máximo que puedes apostar es {saldo_actual:.2f}.")
         else:
             return apuesta
     except ValueError:
@@ -95,11 +95,11 @@ def verificar_ganador(simbolos_aleatorios):
 def actualizar_saldo(saldo,apuesta,ganador):
     if ganador:
         saldo += (apuesta*2)
-        print(f"¡Enhorabuena, has ganado {apuesta*2}€!")
+        print(f"¡Enhorabuena, has ganado {apuesta*2:.2f}€!")
         return saldo
     else:
         saldo -= apuesta
-        print(f"Lástima, has perdido {apuesta}€.")
+        print(f"Lástima, has perdido {apuesta:.2f}€.")
         return saldo
 
 
@@ -130,5 +130,5 @@ while True:
         input("\nPresiona Enter para continuar.") #! es importante aquí marcar un "tope", ya que me continuaría con el bucle y el limpiar pantalla del principio del mismo borraría esta info
 
     elif seleccion ==2:
-        print(f"Su saldo actual es de {saldo_inicial}€")
+        print(f"Su saldo actual es de {saldo_inicial:.2f}€")
         input("\nPresiona Enter para continuar.") 
