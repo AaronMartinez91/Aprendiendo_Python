@@ -3,9 +3,9 @@ import os
 import time
 
 
-simbolos = ("\U0001F361","\U0001F364","\U0001F359") #! Tupla que contiene los símbolos sobre los que jugamos
+simbolos = ("\U0001F361","\U0001F364","\U0001F359") #! Tupla que contiene los símbolos sobre los que jugamos (🍡,🍤,🍙)
 saldo_inicial = 100 #! Tal y como me pide el enunciado empezaremos con un saldo inicial de 100
-# seleccion = None #! Variable de control del bucle principal
+
 
 #! función que muestra el menú con las distintas opciones
 def mostrar_menu():
